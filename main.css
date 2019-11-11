@@ -10,6 +10,8 @@
 .topnav {
   background-color: hsla(210, 90%, 40%, 1);
   overflow: hidden;
+	position: sticky;
+	top: 0;
 }
 
 /* Style the links inside the navigation bar */
@@ -51,7 +53,7 @@
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 800px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {position: sticky;}
   .topnav.responsive a.icon {
     position: absolute;
     right: 0;
