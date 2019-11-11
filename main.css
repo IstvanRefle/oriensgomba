@@ -23,10 +23,6 @@
   font-size: 17px;
 }
 
-.home {
-	float: left;
-}
-
 /* Change the color of links on hover */
 .topnav a:hover {
   background-color: hsla(210, 90%, 65%, 1);
