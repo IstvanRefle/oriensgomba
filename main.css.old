@@ -80,62 +80,52 @@ a:hover {
 }
 
 
-/* ==== MAIN ==== */
+/* ==== PARALLAX ==== */
+.parallax {
+  /* The image used */
+  background-image: url("assets/pic-ganoderma-2-small.jpeg");
 
-body, html {
-  height: 100%;
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
+  /* Set a specific height */
+  min-height: 80vw; 
 
-* {
-  box-sizing: border-box;
-}
-
-.bg-image {
-  /* Full height */
-  height: 45%;
-
-  /* Center and scale the image nicely */
+  /* Create the parallax scrolling effect */
+  background-attachment: scroll;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-/* Images used */
-.img1 { background-image: url("assets/pic-ganoderma-1-small.jpeg"); }
-.img2 { background-image: url("assets/pic-laska1-small.jpeg"); }
-.img3 { background-image: url("assets/pic-shiitake-1-small.jpeg"); }
-.img4 { background-image: url("assets/pic-ganoderma-2-small.jpeg"); }
-.img5 { background-image: url("assets/pic-shiitake-2-small.jpeg"); }
-.img6 { background-image: url("assets/pic-ganoderma-3-small.jpeg"); }
-
-/* Position text in the middle of the page/image */
-.bg-text {
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0, 0.6); /* Black w/opacity/see-through */
-  color: white;
-  font-weight: bold;
-  font-size: 80px;
-  border: 10px solid #f1f1f1;
-  position: fixed; /* Stay fixed */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  width: 600px;
-  padding: 20px;
-  text-align: center;
-}
-
-
 @media only screen and (min-device-width: 800px) {
- 
+  .parallax {
+    background-attachment: fixed;
+  }
 }
 
 
 /* ==== MISSION - OPEN PAGE ==== */
 
+.cover {
+  background: url(assets/pic-ganoderma-2-small.jpeg) no-repeat center;
+  display: table;
+  text-align: center;
+  height: 85vh;
+  width: 100%;
+}
+
+.mission-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.mission-text {
+  margin: 0 auto;
+  padding: .625rem;
+  color: hsla(0,0%,100%,.9);
+  background: hsla(100,0%,0%,.5);
+	width: 95%;
+  text-align: center;
+	
+}
 
 
 /* ==== BODY ==== */
