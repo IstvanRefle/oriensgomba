@@ -160,8 +160,13 @@ a:hover {
 .mashroom {
 	background-color: hsla(0, 0%, 95%, 1);
 	padding: 14px 16px;
-	padding-top: 50px;
-	
+	padding-top: 100px;	
+}
+
+@media only screen and (min-width: 800px) {
+	.mashroom {
+		padding-top: 50px;
+	}
 }
 
 .product {
