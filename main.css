@@ -52,9 +52,9 @@ body, html {
   text-align: center;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 736px) {
 	.bg-text {
-		font-size: 5rem;
+		font-size: 4rem;
 	}
  
 }
@@ -105,7 +105,7 @@ body, html {
 }
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 736px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
@@ -114,7 +114,7 @@ body, html {
 }
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 736px) {
   .topnav.responsive {position: fixed;}
   .topnav.responsive a.icon {
     position: fixed;
@@ -160,10 +160,10 @@ a:hover {
 .mashroom {
 	background-color: hsla(0, 0%, 95%, 1);
 	padding: 14px 16px;
-	padding-top: 100px;	
+	padding-top: 50px;	
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 736px) {
 	.mashroom {
 		padding-top: 50px;
 	}
@@ -219,11 +219,11 @@ footer {
 	padding-bottom: .5rem;
 }
 
-.footer-fixed {
+/*.footer-fixed {
 	position: fixed;
-	bottom: 0;
+	bottom: -50px;
 	width: 100%;
-}
+}*/
 
 .contact-text {
 	
@@ -247,7 +247,7 @@ li {
 	
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 736px) {
 	li {
 		display: inline;
 	}
