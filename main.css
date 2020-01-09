@@ -1,45 +1,190 @@
-/* ==== GENERAL STYLES ==== */
+/* ==== A SIMPLE CSS RESET FROM ERIC MEYER ==== */
 
-* {
-	box-sizing: border-box;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
 }
 
-/* ==== MAIN ==== */
+
+/* ===== GENERAL STYLES ===== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+	padding: 0;
+}
+
+.main,
+.content,
+.footer-fixed,
+.topnav {
+  width: 95%;
+	margin: auto;
+}
+
+
+
+/* ===== BODY ===== */
 
 body, html {
-  height: 100%;
-  margin: 0;
-  padding: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.bg-image {
-  /* Full height */
-  height: 45%;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-	/*opacity: 0.5;
-  filter: alpha(opacity=50);*/ /* For IE8 and earlier */
+h2 {
+	text-align: center;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 
-/* Images used */
-.img1 { background-image: url("assets/pic-ganoderma-1-small.jpeg"); }
-.img2 { background-image: url("assets/pic-laska1-small.jpeg"); }
-.img3 { background-image: url("assets/pic-shiitake-1-small.jpeg"); }
-.img4 { background-image: url("assets/pic-ganoderma-2-small.jpeg"); }
-.img5 { background-image: url("assets/pic-shiitake-2-small.jpeg"); }
-.img6 { background-image: url("assets/pic-ganoderma-3-small.jpeg"); }
 
-/* Position text in the middle of the page/image */
-.bg-text {
+
+/* ===== MUSHROOM ====== */
+
+/* mobile display */
+
+.content {
+	margin: 9vw auto 24vw auto;
+}
+
+
+.mushroom,
+.product,
+.recipe {
+  margin: auto;
+  padding: 1rem;
+	text-align: center;
+}
+
+.mushroom,
+.recipe {
+	background-color: hsla(0, 0%, 95%, 1);
+}
+
+
+/* full display */
+
+@media only screen and (min-width:768px) {
+	.content {
+	 	padding: 0;
+		margin: 2rem auto 2rem auto;
+	}
+	
+  .mushroom,
+	.product,
+	.recipe {
+    float: left;
+    width: 33.33%;
+    padding: 1.5rem;
+    margin: 0;
+  }
+}
+
+
+/* rest */
+
+.question {
+	margin-top: 1.25rem;
+}
+
+.answer {
+	margin-top: 0.5rem;
+	margin-left: 8px;
+	text-indent: 0.5rem;
+}
+
+.answer a {
+  text-decoration: none;
+  color: hsla(0, 0%, 45%, 1);
+}
+
+.answer a:hover {
+  color: hsla(210, 90%, 65%, 1);
+  transition: color .15s ease-in-out;
+}
+
+.recipe-header {
+	margin-bottom: 0.5rem;
+}
+
+.recipe-text {
+	margin-bottom: 0.25rem;
+}
+
+.enjoy {
+	
+}
+
+
+/* ===== INDEX ====== */
+
+/* mobile display */
+
+.main{
+	overflow:auto;
+	margin: 9vw auto 25vw auto;
+}
+
+.img-mushroom {
+  width: 100%;
+  border-radius: 2%;
+  padding: 2px;
+  background-color: #1E90FF;
+  transition: all 0.5s ease-in-out;
+  filter: grayscale(20%);
+}
+
+.img-mushroom:hover {
+  transform: scale(1.02);
+	padding: 3px;
+  filter: grayscale(0%);
+}
+
+.img-cntr {
+  width: 100%;
+  padding: .5rem;
+  margin: auto;
+}
+
+/* full display */
+@media only screen and (min-width:768px) {
+  .img-cntr {
+    float: left;
+    width: 30%;
+    padding: 0;
+    margin: .5rem;
+  }
+}
+
+/* ===== GREETINGS ====== */
+
+.txt-greetings {
   background-color: rgba(0,0,0, 0.6); /* Black w/opacity/see-through */
   color: hsla(0, 0%, 95%, 1);
   font-weight: bold;
   font-size: 2rem;
 	letter-spacing: 0.1rem;
+	font-variant: small-caps;
   /*border: 10px solid hsla(0, 0%, 95%, 1);*/
 	border-radius: 5px;
   position: fixed; /* Stay fixed */
@@ -47,27 +192,26 @@ body, html {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  width: 90vw;
+  width: 60%;
   padding: 20px;
   text-align: center;
 }
 
 @media only screen and (min-width: 736px) {
-	.bg-text {
+	.txt-greetings {
 		font-size: 4rem;
 	}
- 
 }
 
 
-/* ==== TOPNAV ==== */
+/* ===== TOPNAV ===== */
 
 .topnav {
   background-color: hsla(210, 90%, 40%, 1);
   overflow: hidden;
 	position: fixed;
 	top: 0;
-	left: 0;
+	margin: auto;
 	width: 100%;
 	z-index: 3;
 }
@@ -129,122 +273,36 @@ body, html {
 }
 
 
-/* ==== BODY ==== */
-
-h2, p {
-	margin:0;
-	padding:0;
-}
-
-h2 {
-	text-align: center;
-	margin-top: 1rem;
-	margin-bottom: 1rem;
-}
-
-a {
-  text-decoration: none;
-  color: hsla(0, 0%, 95%, 1);
-}
-
-a:hover {
-  color: hsla(0, 0%, 65%, 1);
-  transition: color .15s ease-in-out;
-}
-
-
-.5question {
-	
-}
-
-.mashroom {
-	background-color: hsla(0, 0%, 95%, 1);
-	padding: 14px 16px;
-	padding-top: 50px;	
-}
-
-@media only screen and (min-width: 736px) {
-	.mashroom {
-		padding-top: 50px;
-	}
-}
-
-.product {
-	padding: 14px 16px;
-}
-
-.recipe {
-	background-color: hsla(0, 0%, 95%, 1);
-	padding: 14px 16px;
-}
-
-.question {
-	margin-top: 1.25rem;
-}
-
-.answer {
-	margin-top: 0.5rem;
-	margin-left: 8px;
-	text-indent: 0.5rem;
-}
-
-.answer a {
-  text-decoration: none;
-  color: hsla(0, 0%, 45%, 1);
-}
-
-.answer a:hover {
-  color: hsla(210, 90%, 65%, 1);
-  transition: color .15s ease-in-out;
-}
-
-.recipe-header {
-	margin-bottom: 0.5rem;
-}
-
-.recipe-text {
-	margin-bottom: 0.25rem;
-}
-
-.enjoy {
-	
-}
-
 /* ==== FOOTER ==== */
 
-footer {
-	background-color: hsla(210, 90%, 40%, 1);
+.footer-fixed {
+	position: fixed;
+	bottom: 0px;
+  width: 100vw;
+  background-color: hsla(210, 90%, 40%, 1);
 	color: hsla(0, 0%, 95%, 1);
 	padding-top: .5rem;
 	padding-bottom: .5rem;
+	padding-right: 14px;
 }
 
-/*.footer-fixed {
-	position: fixed;
-	bottom: -50px;
-	width: 100%;
-}*/
-
-.contact-text {
-	
+.contact-text {	
 	text-align: center;
 	margin-bottom:  0;
 }
 
 .contact-links {
-	
 	text-align: center;
 	margin-bottom:  0;
 }
 
 ul {
   list-style-type: none;
-	
 }
+
 li {
   display:block;
 	margin-bottom: .5rem
-	
 }
 
 @media only screen and (min-width: 736px) {
