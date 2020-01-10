@@ -84,7 +84,7 @@ h2 {
 
 /* full display */
 
-@media only screen and (min-width:768px) {
+@media only screen and (min-width:600px) {
 	.content {
 	 	padding: 0;
 		margin: 2rem auto 2rem auto;
@@ -131,10 +131,6 @@ h2 {
 	margin-bottom: 0.25rem;
 }
 
-.enjoy {
-	
-}
-
 
 /* ===== INDEX ====== */
 
@@ -167,7 +163,7 @@ h2 {
 }
 
 /* full display */
-@media only screen and (min-width:768px) {
+@media only screen and (min-width:600px) {
   .img-cntr {
     float: left;
     width: 30%;
