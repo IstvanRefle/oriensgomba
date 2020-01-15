@@ -7,3 +7,7 @@ function myFunction() {
     x.className = "topnav";
   }
 }
+
+//function greetingsHide() {
+//	 document.getElementById("txt-greetings");
+//}

@@ -64,7 +64,7 @@ h2 {
 /* mobile display */
 
 .content {
-	margin: 9vw auto 24vw auto;
+	margin: 3.5rem auto 2vw auto;
 }
 
 
@@ -86,8 +86,7 @@ h2 {
 
 @media only screen and (min-width:600px) {
 	.content {
-	 	padding: 0;
-		margin: 2rem auto 2rem auto;
+	 	
 	}
 	
   .mushroom,
@@ -138,28 +137,30 @@ h2 {
 
 .main{
 	overflow:auto;
-	margin: 9vw auto 25vw auto;
-}
-
-.img-mushroom {
-  width: 100%;
-  border-radius: 2%;
-  padding: 2px;
-  background-color: #1E90FF;
-  transition: all 0.5s ease-in-out;
-  filter: grayscale(20%);
-}
-
-.img-mushroom:hover {
-  transform: scale(1.02);
-	padding: 3px;
-  filter: grayscale(0%);
+	margin: 9vw auto 2vw auto;
 }
 
 .img-cntr {
   width: 100%;
   padding: .5rem;
   margin: auto;
+}
+
+.img-mushroom {
+  width: 100%;
+  border-radius: 2%;
+  padding: 0px;
+  /* background-color: #1E90FF; */
+	background-color:  cyan;
+	box-shadow: hsla(0, 0%, 0%, .8) 0px 0px 6px;
+  transition: all 0.3s ease-in-out;
+  filter: grayscale(20%);
+}
+
+.img-mushroom:hover {
+  transform: scale(1.02);
+	padding: 1px;
+  filter: grayscale(0%);
 }
 
 /* full display */
@@ -177,23 +178,25 @@ h2 {
 .txt-greetings {
   background-color: rgba(0,0,0, 0.6); /* Black w/opacity/see-through */
   color: hsla(0, 0%, 95%, 1);
-  font-weight: bold;
-  font-size: 2rem;
+  
+	font-weight: bold;
+  font-size: 1.6rem;
+	text-align: center;
 	letter-spacing: 0.1rem;
 	font-variant: small-caps;
-  /*border: 10px solid hsla(0, 0%, 95%, 1);*/
+  
+	/*border: 10px solid hsla(0, 0%, 95%, 1);*/
 	border-radius: 5px;
   position: fixed; /* Stay fixed */
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  width: 60%;
+  width: 65%;
   padding: 20px;
-  text-align: center;
+	transform: translate(-50%, -50%);
+  z-index: 2;
 }
 
-@media only screen and (min-width: 736px) {
+@media only screen and (min-width: 600px) {
 	.txt-greetings {
 		font-size: 4rem;
 	}
@@ -216,16 +219,18 @@ h2 {
   float: left;
   display: block;
   color: hsla(0, 0%, 95%, 1);
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 1rem;
+  
 	margin-bottom: 0;
+  padding: 14px 16px;
+	
+  text-decoration: none;
+  font-size: 0.9rem;
+	text-align: center;
 }
 
 .topnav a:hover {
   background-color: hsla(210, 90%, 65%, 1);
-	transition: color .15s ease-in-out;
+	transition: color .3s ease-in-out;
 }
 
 .topnav a.active {
@@ -245,7 +250,7 @@ h2 {
 }
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
@@ -254,7 +259,7 @@ h2 {
 }
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 600px) {
   .topnav.responsive {position: fixed;}
   .topnav.responsive a.icon {
     position: fixed;
@@ -272,24 +277,28 @@ h2 {
 /* ==== FOOTER ==== */
 
 .footer-fixed {
-	position: fixed;
-	bottom: 0px;
-  width: 100vw;
+	position: relative; bottom: 0; width:100%;
+  /* position: fixed; bottom: 0px; width: 100%; */
+	
   background-color: hsla(210, 90%, 40%, 1);
 	color: hsla(0, 0%, 95%, 1);
-	padding-top: .5rem;
-	padding-bottom: .5rem;
-	padding-right: 14px;
+  
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  padding-right: 14px;
+  
+	font-size: .8rem;
+  text-align: center;
 }
 
-.contact-text {	
-	text-align: center;
-	margin-bottom:  0;
+.contact-links a {
+	text-decoration: none;
+	color: lightcyan;
+	transition: all 0.3s ease-in-out;
 }
 
-.contact-links {
-	text-align: center;
-	margin-bottom:  0;
+.contact-links a:hover {
+	color: cyan;
 }
 
 ul {
@@ -298,11 +307,19 @@ ul {
 
 li {
   display:block;
-	margin-bottom: .5rem
+	margin-bottom: .25rem;
 }
 
-@media only screen and (min-width: 736px) {
+/* full screen */
+@media only screen and (min-width: 600px) {
+  .footer-fixed{
+    position: fixed; bottom: 0px; width: 100%;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-right: 14px;
+    font-size: 1rem;
+  }
 	li {
-		display: inline;
+    display: inline;
 	}
 }
