@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="hu">
-    <head>
-        <title>Oriens Gomba</title>
-        <meta name="oriensgomba" content="">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <link rel="stylesheet" type="text/css" href="main.css">
+<head>
+	<title>Oriens Gomba</title>
+	<meta name="oriensgomba" content="">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="main.css">
+
 	
-        <script type="text/javascript" src="app.js"></script>
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <link rel="shortcut icon" type="image/x-icon" href="asstes/logo 32x32.png">
+	<link rel="shortcut icon" type="image/x-icon" href="asstes/logo 32x32.png">
 
 </head>
-<body>
+<body onload="waitForHide()">
 	<div class="topnav" id="myTopnav">
 		<a href="index.html" class="active">Home</a>
 		<a href="#shop">Shop</a>
@@ -43,29 +43,30 @@
 				<img class="img-mushroom img-shiitake" src="assets/pic-shiitake1-small.jpeg" alt="Shiitake">
 			</a>
 	    </div>
+	
+
+		<div class="txt-greetings" id="txt-greetings">Mindenünk a Gomba!</div>
+
+
+		<footer class="footer-fixed">
+
+			<div class="contact-text">
+				<ul>
+				<li>Oriens Gomba Kft.</li>
+				<li> <i class="fa fa-map-marker"></i> 4283 Létavértes, Szél utca 21-23.</li>
+				</ul>
+			</div>
+
+			<div class="contact-links">
+				<ul>
+					<li> <i class="fa fa-facebook-square"></i> <a href="https://www.facebook.com/oriensgomba/" title="Facebook" class="facebook">https://www.facebook.com/oriensgomba/</a> </li>
+					<li> <i class="fa fa-phone-square"></i> <a href="tel:+3652495322">+36 52 495 322</a> </li>
+					<li> <i class="fa fa-envelope-square"></i> <a href="mailto:info@oriensgombe.hu">info@oriensgomba.hu</a> </li>
+				</ul>
+			</div>
+
+		</footer>
 	</div>
-
-	<div class="txt-greetings">Mindenünk a Gomba!</div>
-	
-	
-	<footer class="footer-fixed">
-		
-		<div class="contact-text">
-			<ul>
-			<li>Oriens Gomba Kft.</li>
-			<li> <i class="fa fa-map-marker"></i> 4283 Létavértes, Szél utca 21-23.</li>
-			</ul>
-		</div>
-		
-		<div class="contact-links">
-			<ul>
-				<li><a href="https://www.facebook.com/oriensgomba/" title="Facebook" class="facebook">https://www.facebook.com/oriensgomba/</a></li>
-				<li>Telefon: <a href="tel:+3652495322">+36 52 495 322</a></li>
-				<li>Email: <a href="mailto:info@oriensgombe.hu">info@oriensgomba.hu</a></li>
-			</ul>
-		</div>
-		
-	</footer>
-
+<script type="text/javascript" src="app.js"></script>
 </body>
 </html>
